@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>FILE: CHARACTER_REPORT</title>
+    <style>
+        body {
+            background-color: #008080;
+            font-family: "MS UI Gothic", "MS Pゴシック", sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .window {
+            width: 100%;
+            max-width: 600px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            box-shadow: 2px 2px 0px #000;
+        }
+
+        .title-bar {
+            background: #000080;
+            color: white;
+            padding: 3px 6px;
+            font-weight: bold;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu-bar {
+            display: flex;
+            padding: 2px 5px;
+            border-bottom: 1px solid #808080;
+            font-size: 12px;
+        }
+        .menu-bar span { margin-right: 10px; }
+
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin: 4px;
+            border: 2px inset #fff;
+            min-height: 450px;
+            color: #000;
+        }
+
+        /* 項目ラベルのスタイル */
+        .label {
+            display: inline-block;
+            width: 100px;
+            font-weight: bold;
+            border-bottom: 1px dotted #ccc;
+            margin-bottom: 10px;
+        }
+
+        .data-row {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        /* 詳細セクションの装飾 */
+        .detail-section {
+            margin-top: 30px;
+            padding: 15px;
+            border: 1px dashed #ff0000;
+            background-color: #fff0f0;
+        }
+
+        .detail-title {
+            color: #ff0000;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .stamp {
+            border: 3px double #ff0000;
+            color: #ff0000;
+            padding: 5px 15px;
+            display: inline-block;
+            transform: rotate(-5deg);
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer {
+            padding: 10px;
+            text-align: right;
+        }
+
+        .btn {
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            padding: 4px 25px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #000;
+        }
+        .btn:active { border-color: #808080 #fff #fff #808080; }
+    </style>
+</head>
+<body>
+
+<div class="window">
+    <div class="title-bar">
+        <span>Investigation_Report.txt - Notepad</span>
+        <span>×</span>
+    </div>
+    <div class="menu-bar">
+        <span>File(F)</span><span>Edit(E)</span><span>Search(S)</span><span>Help(H)</span>
+    </div>
+    
+    <div class="content">
+        <div class="stamp">閲覧制限対象</div>
+
+        <div class="data-row"><span class="label">氏名：</span> 緋山（ひやま）</div>
+        <div class="data-row"><span class="label">性別：</span> 男性</div>
+        <div class="data-row"><span class="label">生年月日：</span> 20XX年11月02日</div>
+        <div class="data-row"><span class="label">住所：</span>不明</div>
+        <div class="data-row"><span class="label">所属：</span>機械工学研究科バイオロボティクス専攻</div>
+        <div class="data-row">
+            <span class="label">外見について：</span><br>
+           身長が非常に高い。左の目の下にほくろがある。まあ、ハンサムなほう。
+        </div>
+
+        <div class="detail-section">
+            <span class="detail-title">■ 詳細報告事項</span>
+            <div>
+                若くして工学部の教授をしている男。<br>
+                一時期女子高校生が研究室に入り浸っていたが、いまは来てないらしい。彼女と入れ替わりで、少女型ヒューマノイドが発表された。<br><br>
+                どこに住んでるんだろう。
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="ura.html" class="btn">保存せずに閉じる(X)</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 University Not Found | 大倉大学</title>
+    <style>
+        :root {
+            --univ-yellow: #f5c500;
+            --univ-blue: #003366;
+            --text-gray: #444;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #fff;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            color: var(--text-gray);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* 背景に薄く「FAKE」の文字を散らす */
+        .bg-watermark {
+            position: absolute;
+            font-size: 20vw;
+            font-weight: 900;
+            color: rgba(0,0,0,0.02);
+            z-index: -1;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 40px;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 900;
+            color: var(--univ-yellow);
+            line-height: 1;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* 黄色の数字の後ろに青の影をずらして配置 */
+        .error-code::after {
+            content: "404";
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            color: var(--univ-blue);
+            z-index: -1;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--univ-blue);
+            margin-bottom: 30px;
+            letter-spacing: 0.2em;
+        }
+
+        .message {
+            line-height: 2;
+            margin-bottom: 40px;
+            text-align: left;
+            background: #fdfdfd;
+            border-left: 4px solid var(--univ-yellow);
+            padding: 20px 30px;
+        }
+
+        .message p {
+            margin: 0 0 15px 0;
+        }
+
+        .btn-return {
+            padding: 15px 40px;
+            background: var(--univ-blue);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-return:hover {
+            background: var(--univ-yellow);
+            color: var(--univ-blue);
+            transform: translateY(-3px);
+        }
+
+        /* 検索窓風のジョーク */
+        .search-joke {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .search-joke input {
+            border: 1px solid #ddd;
+            padding: 5px;
+            background: #eee;
+            pointer-events: none;
+        }
+
+        /* フェードインアニメーション */
+        .container {
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-watermark">FICTIONAL FICTIONAL</div>
+
+    <div class="container">
+        <div class="error-code">404</div>
+        <h2>UNIVERSITY NOT FOUND</h2>
+
+        <div class="message">
+            <p><strong>リクエストされた「大倉大学」は、この現実世界には存在しません。</strong></p>
+            <p>
+                誠に申し訳ございませんが、当サーバー内を探しても、東京都内を歩き回っても、本学のキャンパスを見つけることはできません。なぜなら、この学び舎は「トロピカル鮫島」にのみ構築された仮想の大学だからです。
+            </p>
+            <p style="font-size: 13px; color: #888;">
+                ※なお、本サイトで紹介された大学生活や研究内容は、すべて高度にシミュレートされたフィクションであり、実在の人物・団体とは一切関係ありません。また、一部リンクにエラーが発生しています。探してみてください。
+            </p>
+        </div>
+
+        <a href="ookra.html" class="btn-return">トップページへ戻る</a>
+
+        <div class="search-joke">
+            他の大学を探す：
+            <input type="text" value="実在する大学"> <button disabled>検索</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>...</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #333; /* 読みづらい暗い色 */
+            font-family: "MS P明朝", serif;
+            margin: 0;
+            height: 3000px; /* わざと長くする */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .top-message {
+            margin-top: 50px;
+            font-size: 12px;
+        }
+
+        .deep-content {
+            margin-top: 2000px; /* 遥か下に配置 */
+            color: #800; /* 血のような色 */
+            width: 300px;
+            line-height: 2.5;
+            text-align: center;
+        }
+
+        .hidden-link {
+            color: #111;
+            text-decoration: none;
+            font-size: 10px;
+        }
+        .hidden-link:hover { color: #555; }
+    </style>
+</head>
+<body>
+
+    <div class=\"top-message\">
+        ここは、なにもない場所。
+    </div>
+
+    <div class=\"deep-content\">
+        「茜坂が笑った日、<br>
+        サーバーの温度は3度下がった。」<br>
+        <br>
+        「桃沼の歌声には、<br>
+        微かにノイズが混じっている。<br>
+        ……あれは、叫び声だ。」<br>
+        <br>
+        <br>
+        <a href=\"index.html\" class=\"hidden-link\">もどる</a>
+    </div>
+
+</body>
+</html>

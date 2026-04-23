@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大倉大学 | OKURA UNIVERSITY</title>
+    <style>
+        :root {
+            --univ-yellow: #f5c500;  /* 伝統を感じるマスタード系イエロー */
+            --univ-blue: #003366;    /* 信頼のネイビーブルー */
+            --bg-light: #f4f4f4;
+            --text-main: #333;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            color: var(--text-main);
+            line-height: 1.7;
+        }
+
+        /* --- 大学サイト特有の最上部ユーティリティ --- */
+        .top-bar {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            font-size: 11px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .top-bar a { text-decoration: none; color: #666; }
+
+        /* --- ヘッダー：大学名と英語表記の併記 --- */
+        header {
+            padding: 25px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .logo-group h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: var(--univ-blue);
+            letter-spacing: 0.1em;
+        }
+
+        .logo-group span {
+            font-size: 14px;
+            font-weight: bold;
+            color: var(--univ-yellow);
+            letter-spacing: 0.2em;
+        }
+
+        /* --- グローバルナビ：青地に黄色のアクセント --- */
+        nav.main-nav {
+            background: var(--univ-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav.main-nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0 5%;
+        }
+
+        nav.main-nav li {
+            flex: 1;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav.main-nav a {
+            display: block;
+            padding: 18px 0;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav.main-nav a:hover {
+            background: rgba(255,255,255,0.1);
+            color: var(--univ-yellow);
+        }
+
+        /* --- メインビジュアル：横長で落ち着いた印象 --- */
+        .hero-univ {
+            height: 450px;
+            position: relative;
+            background: url('https://images.unsplash.com/photo-1541339907198-e08756defeec?auto=format&fit=crop&q=80&w=1500') center/60% no-repeat;
+            background-size: cover;
+            border-bottom: 10px solid var(--univ-yellow);
+        }
+
+        .hero-tagline {
+            position: absolute;
+            bottom: 40px;
+            left: 5%;
+            background: rgba(0, 51, 102, 0.9);
+            color: #fff;
+            padding: 20px 40px;
+            border-left: 8px solid var(--univ-yellow);
+        }
+
+        .hero-tagline h2 { margin: 0; font-size: 1.8rem; letter-spacing: 0.1em; }
+
+        /* --- 3カラムのバナーエリア（大学サイトの定番） --- */
+        .user-nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: -30px;
+            padding: 0 5%;
+            gap: 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .user-btn {
+            background: #fff;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: var(--univ-blue);
+            font-weight: bold;
+            border-bottom: 4px solid var(--univ-yellow);
+            transition: 0.3s;
+        }
+
+        .user-btn:hover { transform: translateY(-5px); background: var(--univ-yellow); color: #fff; }
+
+        /* --- コンテンツエリア：ニュースとサイドバー --- */
+        .main-layout {
+            max-width: 1200px;
+            margin: 60px auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            padding: 0 5%;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--univ-blue);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .news-list { margin-bottom: 40px; }
+        .news-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .news-item .date { width: 120px; color: #888; }
+        .news-item .category {
+            background: var(--bg-light);
+            padding: 2px 10px;
+            margin-right: 15px;
+            font-size: 11px;
+            border-radius: 2px;
+        }
+
+        /* --- サイドバーのクイックリンク --- */
+        .sidebar-links a {
+            display: block;
+            padding: 15px;
+            background: var(--bg-light);
+            margin-bottom: 10px;
+            text-decoration: none;
+            color: var(--univ-blue);
+            font-size: 14px;
+            font-weight: bold;
+            border-left: 4px solid var(--univ-blue);
+        }
+
+        /* --- フッター：重厚な組織感 --- */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 60px 5% 20px;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-info h3 { color: var(--univ-yellow); margin-bottom: 10px; }
+        .footer-map-link { color: var(--univ-yellow); text-decoration: underline; }
+
+        .copyright {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 11px;
+            color: #999;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout, .user-nav { grid-template-columns: 1fr; }
+            .hero-univ { height: 300px; }
+            nav.main-nav ul { flex-wrap: wrap; }
+            nav.main-nav li { flex: none; width: 50%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <a href="owabi.html">サイトマップ</a>
+        <a href="gete.html">アクセスマップ</a>
+        <a href="owabi.html">お問い合わせ</a>
+        <a href="owabi.html">English</a>
+    </div>
+
+    <header>
+        <div class="logo-group">
+            <h1>大倉大学</h1>
+            <span>OKURA UNIVERSITY</span>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="キーワード検索" style="padding: 5px;">
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="owabi.html">大学紹介</a></li>
+            <li><a href="owabi.html">学部・大学院</a></li>
+            <li><a href="owabi.html">教育・研究</a></li>
+            <li><a href="owabi.html">学生生活</a></li>
+            <li><a href="owabi.html">進路・就職</a></li>
+            <li><a href="owabi.html">国際交流</a></li>
+        </ul>
+    </nav>
+
+<section class="hero-univ" style="background: none;"> <img src="img/okura1.jpg" alt="大倉大学メインキャンパス" style="width: 100%; height: 100%; object-fit: cover;">
+    <div class="hero-tagline">
+        <h2>「個」を磨き、世界へ。</h2>
+        <p>100年の歴史を持つ大倉大学の学びが、あなたの未来を創る。</p>
+    </div>
+</section>
+
+    <div class="user-nav">
+        <a href="owabi.html" class="user-btn">受験生の方</a>
+        <a href="owabi.html" class="user-btn">在学生・保護者の方</a>
+        <a href="owabi.html" class="user-btn">卒業生・地域の方</a>
+    </div>
+
+    <div class="main-layout">
+        <main>
+            <section>
+                <div class="section-header section-title">
+                    <span>重要なお知らせ</span>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <span class="date">2026.04.23</span>
+                        <span class="category">重要</span>
+                        <span class="text">令和8年度 入学式およびオリエンテーションの実施について</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">2026.04.15</span>
+                        <span class="category">入試</span>
+                        <span class="text">オープンキャンパス2026（6月開催分）の予約を開始しました</span>
+                    </div>
+                    <div class="news-item">
+                        <span class="date">2026.04.10</span>
+                        <span class="category">研究</span>
+                        <span class="text">工学部研究チームが新プロジェクトを公開</span>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-header section-title">
+                    <span>ニュース</span>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="background: var(--bg-light); height: 150px; padding: 20px;">【注意喚起】「非公認サークル」について</div>
+                    <div style="background: var(--bg-light); height: 150px; padding: 20px;">【学生生活】2026年度 学生生活案内</div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="sidebar-links">
+                <a href="owabi.html">資料請求・デジタルパンフレット</a>
+                <a href="owabi.html">インターネット出願</a>
+                <a href="owabi.html">就職・キャリア支援</a>
+                <a href="owabi.html">附属図書館</a>
+                <a href="owabi.html">研究者データベース</a>
+                <a href="owabi.html">創立100周年記念事業</a>
+            </div>
+            
+            <div style="margin-top: 30px; background: var(--univ-blue); color: #fff; padding: 20px;">
+                <p style="font-size: 12px; margin-bottom: 5px;">公式SNS</p>
+                <div style="display: flex; gap: 10px;">
+                    <div style="width: 30px; height: 30px; background: #fff; border-radius: 50%;"></div>
+                    <div style="width: 30px; height: 30px; background: #fff; border-radius: 50%;"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <h3>大倉大学</h3>
+                <p>〒123-4567 東京都■■区■■X-X-X</p>
+                <p>TEL: 03-XXXX-XXXX</p>
+                <a href="gete.html" class="footer-map-link">アクセスマップ</a>
+            </div>
+            <div style="display: flex; gap: 50px;">
+                <div>
+                    <p><b>組織について</b></p>
+                    <p>大学の概要</p>
+                    <p>学長挨拶</p>
+                    <p>情報公開</p>
+                </div>
+                <div>
+                    <p><b>サポート</b></p>
+                    <p>プライバシーポリシー</p>
+                    <p>サイトポリシー</p>
+                    <p>教職員採用</p>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; トロピカル鮫島
+        </div>
+    </footer>
+
+</body>
+</html>

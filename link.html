@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .link-container {
+            max-width: 600px;
+            margin: 20px auto;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+        }
+        .link-item {
+            display: flex;
+            align-items: center; /* アイコンと文字を中央で揃える */
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.2s;
+        }
+        .link-item:hover {
+            background-color: #f9f9f9;
+        }
+        .link-icon {
+            width: 48px;
+            height: 48px;
+            object-fit: cover; /* 画像が歪まないように調整 */
+            border-radius: 4px; /* 少し角を丸くすると今風になります */
+            margin-right: 15px; /* アイコンと文字の間の余白 */
+            background-color: #eee; /* 画像がない時の予備色 */
+        }
+        .site-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .site-name {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #0066cc;
+        }
+        .site-desc {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 2px;
+        }
+
+        .back-home { margin-top: 100px; text-align: center; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+<div class="link-container">
+    <h2>リンク集（一方的にリンクしています）</h2>
+
+    <a href="https://azinosasimidayo.wixsite.com/mysite" class="link-item" target="_blank" rel="noopener">
+        <img src="img/L_NANAIRO.png" alt="ナナイロ" class="link-icon">
+        <div class="site-info">
+            <span class="site-name">刺身屋さん</span>
+            <span class="site-desc">UTAU音源「ナナイロ」さんなど</span>
+        </div>
+    </a>
+
+    <a href="https://maimai8m.wixsite.com/sinya8m" class="link-item" target="_blank" rel="noopener">
+        <img src="img/L_KILL.png" alt="キル" class="link-icon">
+        <div class="site-info">
+            <span class="site-name">深海のこもりうた</span>
+            <span class="site-desc">UTAU音源「キル」さんなど</span>
+        </div>
+    </a>
+
+    <a href="https://www.ne.jp/asahi/beat/non/mori/" class="link-item" target="_blank" rel="noopener">
+        <img src="img/L_MORI.png" alt="森" class="link-icon">
+        <div class="site-info">
+            <span class="site-name">森博嗣の浮遊工作室</span>
+            <span class="site-desc">工学博士で小説家の森博嗣さんのHP。小説「すべてがFになる」など</span>
+        </div>
+    </a>
+
+      <a href="ookra.html" class="link-item" target="_blank" rel="noopener">
+        <img src="img/L_OOKURA" alt="大倉大学" class="link-icon">
+        <div class="site-info">
+            <span class="site-name">大倉大学</span>
+            <span class="site-desc">大倉大学の公式HP。研究内容を一部抜粋しています。ご協力感謝</span>
+        </div>
+    </a>
+
+
+    <div class="back-home">
+        [ <a href="index.html">TOPへ戻る</a> ]
+    </div>
+</div>
+
+
+
+</body>
+</html>

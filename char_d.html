@@ -1,0 +1,177 @@
+<div class="researcher-db-container">
+  <div class="db-system-bar">
+    <span>研究者総覧システム ver.7.0</span>
+    <div class="lang-switch">Japanese | <span class="gray">English</span></div>
+  </div>
+
+  <div class="db-content">
+    <div class="basic-profile">
+      <div class="profile-photo">
+        <img src="img/Prof.H.png" alt="緋山教授" width="200">
+      </div>
+      <div class="profile-text">
+        <p class="reading">ヒヤマ ■■</p>
+        <h1 class="researcher-name">緋山 ■■ <span class="title">教授 (Professor)</span></h1>
+        <p class="affiliation">大学院 機械工学研究科 バイオロボティクス専攻</p>
+        
+        <div class="tags">
+          <span class="tag">音声合成</span>
+          <span class="tag">UTAU</span>
+          <span class="tag">無生物音源</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="db-tabs">
+      <div class="tab active">基本情報</div>
+      <div class="tab">研究業績</div>
+      <div class="tab">所属学協会</div>
+    </div>
+
+    <div class="info-section">
+      <h2 class="db-heading">学位</h2>
+      <p class="db-item">博士（工学） 大倉大学</p>
+
+      <h2 class="db-heading">研究の概要</h2>
+      <p class="db-item abstract">
+        のこぎり波をもとにした無生物音源です。
+
+​若くして工学部の教授をしています。内向的な性格で、猫とタバコが好きです。
+      </p>
+
+      <h2 class="db-heading">音声出力サンプル</h2>
+      <div class="voice-list">
+        <div class="voice-row">
+          <span class="voice-type">【UST 有魚神弥/番煎P】</span>
+          <audio controls src="audio/Prof.H_N.wav"></audio>
+        </div>
+      </div>
+
+      <h2 class="db-heading">主な業績・論文</h2>
+      <ul class="papers-list">
+        <li>「人工喉頭における音声パラメータの制御」 (20XX)</li>
+        <li><a href="https://bowlroll.net/file/345695">歌唱用音声ライブラリ『緋山教授 Ver.1.0』公開</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="db-footer">
+    更新日：2026/04/13
+  </div>
+</div>
+
+<style>
+  .researcher-db-container {
+    max-width: 800px;
+    background: #fff;
+    color: #333;
+    font-family: "MS UI Gothic", "Meiryo", sans-serif;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+
+    margin: auto; 
+  }
+
+  /* システムバー：お役所仕事風のグレー */
+  .db-system-bar {
+    background: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 15px;
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+  }
+
+  .db-content { padding: 25px; }
+
+  /* プロフィールエリア：左に写真、右に氏名 */
+  .basic-profile {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #004098; /* 大学っぽい濃紺 */
+    padding-bottom: 20px;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 180px;
+    background: #eee;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .no-image { font-size: 12px; color: #999; text-align: center; }
+
+  .reading { font-size: 12px; margin: 0; color: #777; }
+  .researcher-name { font-size: 26px; margin: 5px 0; font-weight: bold; }
+  .researcher-name .title { font-size: 16px; font-weight: normal; margin-left: 10px; }
+  .affiliation { font-size: 14px; color: #444; }
+
+  .tags { margin-top: 10px; }
+  .tag {
+    background: #e8f0fe;
+    color: #1967d2;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    margin-right: 5px;
+  }
+
+  /* タブメニュー風装飾 */
+  .db-tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+  }
+  .tab {
+    padding: 8px 20px;
+    font-size: 13px;
+    cursor: default;
+    border: 1px solid transparent;
+  }
+  .tab.active {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    margin-bottom: -1px;
+    font-weight: bold;
+    color: #004098;
+  }
+
+  /* セクション見出し */
+  .db-heading {
+    background: #f8f8f8;
+    border-left: 5px solid #004098;
+    padding: 5px 10px;
+    font-size: 15px;
+    margin: 25px 0 10px 0;
+  }
+
+  .db-item { font-size: 14px; padding-left: 10px; }
+  .abstract { line-height: 1.7; text-align: justify; }
+
+  /* 音声リスト */
+  .voice-list { padding-left: 10px; }
+  .voice-row {
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #eee;
+    padding-bottom: 10px;
+  }
+  .voice-type { display: block; font-size: 13px; font-weight: bold; margin-bottom: 5px; }
+  audio { width: 100%; max-width: 400px; height: 30px; }
+
+  .papers-list { font-size: 13px; padding-left: 25px; }
+  .papers-list li { margin-bottom: 5px; }
+
+  .db-footer {
+    text-align: right;
+    font-size: 11px;
+    color: #999;
+    padding: 10px 20px;
+    background: #f9f9f9;
+  }
+</style>
+

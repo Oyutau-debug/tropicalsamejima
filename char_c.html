@@ -1,0 +1,176 @@
+<div class="critic-site-container">
+  <div class="critic-header">
+    <div class="site-logo">🎬 CINE-REVIEW<span>.db</span></div>
+    <div class="search-bar">Search for characters...</div>
+  </div>
+
+  <div class="movie-detail-header">
+    <div class="movie-poster">
+      <img src="img/Mnuma.png" alt="桃沼" width="200">
+    </div>
+    
+    <div class="movie-info">
+      <div class="year-genre">2026 • Information engineering • UTAU Voice</div>
+      <h1 class="movie-title">桃沼-momonuma-</h1>
+      
+      <div class="score-row">
+        <div class="score-item">
+          <span class="score-icon">🍅</span>
+          <div class="score-data">
+            <span class="percentage">175cm</span>
+            <span class="label">HEIGHT</span>
+          </div>
+        </div>
+        <div class="score-item">
+          <span class="score-icon">🍿</span>
+          <div class="score-data">
+            <span class="percentage">60kg</span>
+            <span class="label">WEIGHT</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="synopsis">
+        <p><strong>Synopsis:</strong> 大学二年生。病弱で人見知りの好青年です。筋金入りの映画マニアで、とくにホラー映画が好きです。
+
+</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cast-section">
+    <h2 class="section-title">Voice Database (CV HISANO)</h2>
+    
+    <div class="voice-grid">
+  <a href="https://bowlroll.net/file/342343" class="voice-card-link" target="_blank" rel="noopener">
+    <div class="voice-card">
+      <div class="voice-meta">
+        <span class="stars">★★★★★</span>
+        <span class="role-name">"normal" (通常音源)</span>
+      </div>
+      
+      <audio controls src="audio/Mnuma_N.wav" onplay="event.stopPropagation();"></audio>
+      
+      <p class="review-comment">「中性的でウィスパーな二音階の単独音」</p>
+    </div>
+  </a>
+</div>
+
+<div class="voice-grid">
+  <a href="https://example.com" class="voice-card-link" target="_blank" rel="noopener">
+    <div class="voice-card">
+      <div class="voice-meta">
+        <span class="stars">★★★★☆</span>
+        <span class="role-name">"sick" (風邪音源)</span>
+      </div>
+      
+      <audio controls src="audio/Mnuma_S.wav" onplay="event.stopPropagation();"></audio>
+      
+      <p class="review-comment">「エッジのきいた母音とやわらかい倍音。tn_fndsでの使用推奨」</p>
+    </div>
+  </a>
+</div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .critic-site-container {
+    max-width: 800px;
+    background: #ffffff;
+    color: #333;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    border: 1px solid #ddd;
+
+       margin:  auto; /* 上下に40pxの余白を作り、左右を中央寄せにする */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 浮いている感じを出すとお洒落です */
+  }
+
+  /* ヘッダー：モダンなサイト風 */
+  .critic-header {
+    background: #2a2d32;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .site-logo { color: #fa320a; font-weight: 900; font-size: 20px; }
+  .site-logo span { color: #fff; font-weight: normal; }
+  .search-bar { background: #444; color: #888; padding: 5px 15px; border-radius: 20px; font-size: 12px; width: 200px; }
+
+  /* メイン情報エリア */
+  .movie-detail-header {
+    display: flex;
+    padding: 30px;
+    background: #f8f9fa;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .poster-placeholder { color: #555; text-align: center; padding-top: 130px; font-weight: bold; }
+
+  .movie-info { flex: 1; }
+  .year-genre { font-size: 12px; color: #777; margin-bottom: 5px; }
+  .movie-title { font-size: 32px; margin: 0 0 20px 0; font-weight: 800; color: #2a2d32; }
+
+  /* スコア表示 */
+  .score-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+  }
+  .score-item { display: flex; align-items: center; gap: 10px; }
+  .score-icon { font-size: 30px; }
+  .score-data { display: flex; flex-direction: column; }
+  .percentage { font-size: 24px; font-weight: bold; line-height: 1; }
+  .label { font-size: 10px; color: #777; font-weight: bold; }
+
+  .synopsis { font-size: 14px; line-height: 1.6; color: #444; }
+
+  /* 音源リストセクション */
+  .cast-section { padding: 30px; }
+  .section-title { font-size: 20px; border-bottom: 2px solid #2a2d32; padding-bottom: 10px; margin-bottom: 20px; }
+
+  .voice-grid { display: grid; gap: 15px; }
+  .voice-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    transition: 0.2s;
+  }
+  .voice-card:hover { border-color: #fa320a; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+
+  .voice-meta { display: flex; justify-content: space-between; margin-bottom: 10px; align-items: center; }
+  .stars { color: #ffbd00; font-size: 14px; }
+  .role-name { font-weight: bold; font-size: 14px; color: #2a2d32; }
+
+  .review-comment { font-size: 12px; color: #666; font-style: italic; margin-top: 10px; border-left: 2px solid #eee; padding-left: 10px; }
+
+  audio { width: 100%; height: 35px; }
+
+  /* リンクの装飾を打ち消す */
+.voice-card-link {
+  text-decoration: none;
+  color: inherit; /* 文字色を親要素から引き継ぐ */
+  display: block; /* カード全体をリンク範囲にする */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* ホバーした時に少し浮き上がらせる（お好みで） */
+.voice-card-link:hover {
+  transform: translateY(-3px);
+}
+
+.voice-card {
+  cursor: pointer; /* マウスを乗せた時に指の形にする */
+  /* すでに設定されているであろう枠線などのスタイルはそのまま */
+}
+
+/* オーディオプレイヤーをクリックした時はリンクに反応させないための設定 */
+audio {
+  position: relative;
+  z-index: 10;
+}
+</style>
+

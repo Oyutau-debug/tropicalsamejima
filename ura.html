@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>CONFIDENTIAL - Character Records</title>
+    <style>
+        body {
+            background-color: #008080; 
+            font-family: "MS UI Gothic", "MS Pゴシック", sans-serif;
+            margin: 20px;
+            cursor: default;
+        }
+
+        .desktop-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        /* ウィンドウ全体をリンクにするための設定 */
+        .window-link {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            transition: transform 0.1s;
+        }
+
+        .window-link:hover {
+            transform: translate(-2px, -2px); /* 少し浮き上がる演出 */
+        }
+
+        .window {
+            width: 280px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .title-bar {
+            background: #808080;
+            color: #c0c0c0;
+            padding: 3px 6px;
+            font-weight: bold;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* ホバーでアクティブ（青）になる */
+        .window-link:hover .title-bar {
+            background: #000080;
+            color: white;
+        }
+
+        .content {
+            padding: 12px;
+            font-size: 13px;
+        }
+
+        .char-icon {
+            width: 60px;
+            height: 60px;
+            background: #000;
+            float: left;
+            margin-right: 12px;
+            border: 2px inset #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #555;
+            font-size: 10px;
+        }
+
+        .info-summary {
+            margin-bottom: 10px;
+        }
+
+        .click-prompt {
+            text-align: right;
+            font-size: 11px;
+            color: #000080;
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 5px;
+        }
+
+        .back-link {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background: #c0c0c0;
+            border: 2px solid;
+            border-color: #fff #808080 #808080 #fff;
+            padding: 4px 12px;
+            text-decoration: none;
+            color: #000;
+            font-size: 12px;
+        }
+        .back-link:active { border-color: #808080 #fff #fff #808080; }
+    </style>
+</head>
+<body>
+
+<div class="desktop-area">
+
+    <a href="ura_a.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>AKANEZAKA.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 茜坂</strong><br>
+                    ID: 00-410<br>
+                    RANK: A
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="ura_b.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>SAKURAZU.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 桜津</strong><br>
+                    ID: 00-522<br>
+                    RANK: B
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="ura_c.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>MOMONUMA.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 桃沼</strong><br>
+                    ID: 00-410<br>
+                    RANK: A
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="ura_d.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>HIYAMA.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 緋山</strong><br>
+                    ID: 00-410<br>
+                    RANK: A
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="ura_e.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>MAIJO.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 苺上</strong><br>
+                    ID: 00-410<br>
+                    RANK: A
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="ura_f.html" class="window-link">
+        <div class="window">
+            <div class="title-bar"><span>SYUNO.TXT</span><span>×</span></div>
+            <div class="content">
+                <div class="char-icon">PHOTO</div>
+                <div class="info-summary">
+                    <strong>FILE: 朱野</strong><br>
+                    ID: 00-410<br>
+                    RANK: A
+                </div>
+                <div class="click-prompt">詳細を開く(O)</div>
+            </div>
+        </div>
+    </a>
+
+
+
+    </div>
+
+<a href="index.html" class="back-link">閉じる(C)</a>
+
+</body>
+</html>
